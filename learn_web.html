@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learn javascript</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="refresh" content="120" />
+	<base href="/home/shangguan/Desktop/Learn_web/" />
+	<link rel="stylesheet" type="text/css" href="learn_web.css" />
+	<script src="learn_web.js"></script>
+</head>
+
+<body onload="startTime()"> <!--checkCookieExist()-->
+
+	<h1>javascript learning</h1>
+	<div>
+		<p class="indent">
+		We'll finish the JavaScript training by putting together all the concepts with the creation of a simple zombie text adventure game.While building a project together, you'll be provided with valuable knowledge, and the real power comes from being able to take the techniques you've learned and apply them in a different way to your own work. With this in mind, you'll be presented with an assignment immediately following each volume. </p>
+		<p class="indent">
+		These assignments will challenge you to take the skills that you've learned in a particular volume and apply them to a different asset.These tutorials are designed to be taken in sequence so we really encourage you to start with this volume and proceed all the way through to Volume 3, all so you can take advantage of the periodic assignments along the way to get the full learning experience. Software required: Mozilla Firefox.</p>
+	</div>
+
+	
+	<div>
+		<p>点击按钮就可以执行 <em>displayDate()</em> 函数。</p>
+		<button onclick="displayDate()">Current time of sysytem</button>
+		<div id="time_show_color">
+			<p id="demo_datetime"></p>
+		</div>
+	</div>
+
+	<div>
+		<hr />
+		<img id="beauty_image" src="/home/shangguan/Pictures/baotaonv.jpg" width="442" height="626" />
+		<div>
+			<button type="button" onclick="change_picture()">
+				change Beauty!
+			</button>
+		</div>
+	</div>
+
+	<div>
+		<form action="demo-form.php">
+			<fieldset>
+				<legend>Input Area:</legend>
+				<p>Attention:please input a digit. if not, the browser will give a warning!</p>
+				<input type="text" id="demo_2" />
+				<input type="reset" value="重置" class="button_color" />
+				<button type="button" onclick="Deal_digit()">click here to submit!
+				</button>				
+			</fieldset>
+		</form>
+	</div>
+
+	<div>
+		<p>请输入 5 到 10 之间的数字：</p>
+		<input id="demo_4" type="text" name="number">
+		<p id="mess"></p>
+		<button type="button" onclick="error_catch()">测试输入值</button>
+	</div>
+	
+	<div>
+		<hr />
+		<p id="demo_change_content">JavaScript 能改变 HTML 元素的内容。</p>
+		<button type="button" onclick="change_element_content()">click me!</button>
+		<hr />
+	</div>
+
+	<div>
+		<p id="demo_attribute_color">javascript can change the style of element!</p>
+		<button type="button" onclick="change_attribute_color()">
+			click here to change color!
+		</button>
+		<hr />
+	</div>
+
+	<div>
+		<p>当您离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+		<input type="text" id="fname" onchange="toUpperCase_leave()">
+		<hr />
+	</div>
+
+	<div id="mouse_on_and_out" onmouseover="mouseOver(this)"
+								onmouseout="mouseOut(this)">
+		<p>put your mouse on and leave!</p>
+	</div>
+
+	<hr />
+		<div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" id="mouse_down_and_up"	>
+			<p>please click here!</p>
+		</div>
+
+	<div>
+		<hr />
+		请输入英文字符：<input type="text" onfocus="input_color_change(this)">
+		<p>当输入字段获得焦点时，会触发改变背景颜色的函数。</p>
+	</div>
+
+	<div>
+		<hr />
+		<p id="center_show" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">please put your mouse on!</p>
+		<hr />
+	</div>
+
+	<div>
+		<p>click the bulbon below to on or off!</p>
+		<img id="bulbon_image" src="pic_bulboff.gif" onclick="change_bulbon_off_and_on()">
+		<hr>
+	</div>
+
+	<div id="del_element">
+		<p id="paragraph_1">同我一样都是P元素的下面的元素可以被JS删除！</p>
+		<p id="del_p_element">我现在还在，点击下面的图标可以删除我！</p>
+		<button type="button" onclick="delElement()">删除元素</button>
+		<p id="element_hidden">我现在还在，点击下面的图标可以显示/隐藏我！</p>
+		<button type="button" onclick="hideShowElement()">显示/隐藏元素</button>
+		<hr />
+	</div>
+
+	<div>
+		<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+		<button type="button" onclick="javascript_for_in()">点击这里</button>
+		<p id="id_javascript_for_in"></p>
+		<hr/>
+	</div>
+
+	<div>
+		<p id="show_time_clock"></p>
+		<form>
+			<p>请点击下面的按钮。输入框会从 0 开始一直进行计时。</p>
+			<input type="text" id="timed_count_unlimited">		
+			<input type="button" value="开始计时！" onclick="timedCount()">
+			<input type="button" value="停止计时！" onclick="stopTimeCount()">
+		</form>
+	</div>
+
+	<div onload="re_g()"></div>
+
+	<div>
+		<hr>
+		<input type="button" value="加载新文档_Baidu" onclick="newDoc_1()">
+		<input type="button" value="加载新文档_Sina" onclick="newDoc_2()">
+	</div>
+
+	<div>
+		<input type="button" value="后退" onclick="goBackBroswer()" />
+		<input type="button" value="前进" onclick="goForwardBroswer()" />
+		<input type="button" onclick="show_confirm()" value="确认框" />
+		<input type="button" onclick="disp_prompt()" value="提示框" />
+		<input type="button" onclick="timed_alert()" value="1秒后将显示一个警告框" />
+		<hr>
+	</div>
+
+	<div>
+		<p id="p01"></p>
+	</div>
+
+	<div id="header">
+		<h1>City Gallery</h1>
+	</div>
+
+	<div id="nav">
+		London<br/>
+		Pairs<br/>
+		Tokyo<br/>
+	</div>
+
+	<div id="section">
+		<h2>London</h2>
+		<p>
+		London is the capital city of England. It is the most populous city in the United Kingdom,with a metropolitan area of over 13 million inhabitants.</p>
+		<p>Standing on the River Thames, London has been a major settlement for two millennia,its history going back to its founding by the Romans, who named it Londinium.</p>
+	</div>
+
+	<div id="footer">
+		Copyright:www.shangguan.com
+	</div>
+
+</body>
+</html>
